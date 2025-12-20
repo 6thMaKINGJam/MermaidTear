@@ -587,6 +587,7 @@ GameObject:
   - component: {fileID: 1203127311}
   - component: {fileID: 1203127310}
   - component: {fileID: 1203127312}
+  - component: {fileID: 1203127313}
   m_Layer: 0
   m_Name: player-sprite
   m_TagString: Untagged
@@ -745,6 +746,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7be69868ecbb8478e1e317c437c30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _moveSpeed: 5
+--- !u!95 &1203127313
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203127307}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf7cb81b2b8affa4899d58a2a61f14e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1689596177
 GameObject:
   m_ObjectHideFlags: 0
