@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float MaxHealth = 5;
     public float CurrentHealth { get; set; }
+    public bool TempInvincible { get; set; }
 
     private void Start()
     {
@@ -33,9 +34,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == Layers.EnemyLayer)
+        if (other.gameObject.layer == Layers.EnemyLayer && !TempInvincible)
         {
             ReduceHealth(other.GetComponent<EnemyAttack>().AtkPower);
+            StartCoroutine(GetComponent<PlayerHurtBlink>().HurtBlink());
         }
     }
 }

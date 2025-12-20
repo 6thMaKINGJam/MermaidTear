@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 43299653}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 1203127313}
   - component: {fileID: 1203127315}
   - component: {fileID: 1203127314}
+  - component: {fileID: 1203127316}
   m_Layer: 6
   m_Name: player-sprite
   m_TagString: Untagged
@@ -1004,6 +1005,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 5
+--- !u!114 &1203127316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203127307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713e31d41f1066344ae466548545034c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hurtBlinkSeconds: 0.14
+  _hurtColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1689596177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1826223445}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: crab-temp-positionA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1210,7 +1225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1858614656}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: crab-temp-positionB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
