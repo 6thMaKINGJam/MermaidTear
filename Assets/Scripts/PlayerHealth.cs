@@ -18,27 +18,29 @@ public class PlayerHealth : MonoBehaviour
     public void ResetHealth()
     {
         CurrentHealth = MaxHealth;
-        Debug.Log("player health: " + CurrentHealth);
+        healthChangedAction();
     }
 
     public void ReduceHealth(float amount)
     {
         CurrentHealth -= amount;
         if (CurrentHealth < 0) CurrentHealth = 0;
-
-        int heartCnt = Mathf.RoundToInt(CurrentHealth / 0.5f);
-        Debug.Log(heartCnt);
-        _uiPlayerHearts.UpdateHeartsUI(heartCnt);
-
-        Debug.Log("player health: " + CurrentHealth);
+        healthChangedAction();
     }
 
     public void RestoreHealth(float amount)
     {
         CurrentHealth += amount;
         if (CurrentHealth > MaxHealth) ResetHealth();
+        healthChangedAction();
+    }
 
-        Debug.Log("player health: " + CurrentHealth);
+    private void healthChangedAction()
+    {
+        int heartCnt = Mathf.RoundToInt(CurrentHealth / 0.5f);
+        _uiPlayerHearts.UpdateHeartsUI(heartCnt);
+
+        Debug.Log($"player health: {CurrentHealth}, player heartCnt: {heartCnt}");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
