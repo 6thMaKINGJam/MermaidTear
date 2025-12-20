@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        Vector2 inputDirFloat = InputReader.Input.FindAction("Move").ReadValue<Vector2>();
+        Vector2 inputDirFloat = InputSystem.actions.FindAction("Move").ReadValue<Vector2>();
         _playerDirH = (int)inputDirFloat.x;
         _playerDirV = (int)inputDirFloat.y;
         //Debug.Log(inputDirFloat);
