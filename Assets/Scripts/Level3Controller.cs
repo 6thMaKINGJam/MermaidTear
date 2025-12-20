@@ -1,11 +1,22 @@
 using UnityEngine;
+using System.Collections;
 
 public class Level3Controller : MonoBehaviour
 {
     public DialogueManager dialogueManager;
 
+
+    [Header("Conversations")]
+    public Conversation mercyEndingConversation;
+
     private void Start()
     {
+        if (dialogueManager == null)
+        {
+            Debug.LogError("[Level3Controller] dialogueManager가 연결 안 됨!");
+            return;
+        }
+
         dialogueManager.OnDialogueEvent += HandleEvent;
     }
 
@@ -13,18 +24,25 @@ public class Level3Controller : MonoBehaviour
     {
         if (key == "FIGHT_QUEEN")
         {
-            Debug.Log("전투 루트 시작!");
-            // TODO: 인어여왕과의 싸움 시작(보스 AI 활성화, 전투 UI 켜기 등)
+            //전투
         }
         else if (key == "MERCY_PATH")
         {
             Debug.Log("연민 루트 시작!");
-            // 
+
+            if (mercyEndingConversation == null)
+            {
+                Debug.LogError("[Level3Controller] mercyEndingConversation이 연결 안 됨!");
+                return;
+            }
+
+            StartCoroutine(StartMercyEndingNextFrame());
         }
-        else if (key == "SHOW_VISION")
-        {
-            Debug.Log("환영 컷신!");
-            // TODO: VisionPanel 켜고 1~2초 후 끄기
-        }
+    }
+
+    private IEnumerator StartMercyEndingNextFrame()
+    {
+        yield return null;
+        dialogueManager.StartDialogue(mercyEndingConversation);
     }
 }
