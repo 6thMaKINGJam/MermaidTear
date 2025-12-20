@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        Vector2 inputDirFloat = InputReader.Input.FindAction("Move").ReadValue<Vector2>();
+        Vector2 inputDirFloat = InputReader.Input.Player.Move.ReadValue<Vector2>();
         _playerDirH = (int)inputDirFloat.x;
         _playerDirV = (int)inputDirFloat.y;
         //Debug.Log(inputDirFloat);
