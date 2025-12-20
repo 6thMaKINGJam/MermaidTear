@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af142138a1bd69549b7035440f22724f
+guid: 5fa7c419414f6e6419fd75b27c94b66f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water_tile_0
+      name: Kraken'sleg_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64.66667
-        width: 32.333332
-        height: 32.333332
+        y: 300
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0cfcfb4eea28e2448a1c2627039af70
-      internalID: 859993503
+      spriteID: e2117fb24e916b54d9f1448652650ba9
+      internalID: -1931271666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_tile_1
+      name: Kraken'sleg_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64.66667
-        width: 32.333332
-        height: 32.333332
+        x: 60
+        y: 300
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32e3633d1680ac9418ef958db22328a9
-      internalID: -178774520
+      spriteID: cbcf517f059eeb14e8062f1111506b79
+      internalID: -997759189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_tile_2
+      name: Kraken'sleg_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64.66667
-        width: 32.333332
-        height: 32.333332
+        x: 120
+        y: 300
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,83 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66c266371213a874e90f5975c97b11b7
-      internalID: -75177179
+      spriteID: a7ee3193a4ea61b4b8ccff1891c9ad38
+      internalID: 497396462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_tile_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32.666668
-        width: 32.333332
-        height: 32.333332
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbc03eef33fe36f4d9976be080141cdf
-      internalID: -450323490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water_tile_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32.666668
-        width: 32.333332
-        height: 32.333332
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0a17cc5ff8244e4cb330fada762c04d
-      internalID: -483247141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water_tile_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32.666668
-        width: 32.333332
-        height: 32.333332
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe3563f1ee9dfea469356f255531510c
-      internalID: 62782502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water_tile_6
+      name: Kraken'sleg_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.66666794
-        width: 32.333332
-        height: 32.333332
+        y: 200
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ab768c154e72d74e835c4c0f3c7248d
-      internalID: 1248693512
+      spriteID: 37ac3e833e1aa9348a2491e5d103a0f4
+      internalID: -1077851391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_tile_7
+      name: Kraken'sleg_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0.66666794
-        width: 32.333332
-        height: 32.333332
+        x: 60
+        y: 200
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27870f61a863242479b422828f422e31
-      internalID: -476691565
+      spriteID: 92c0a13c374ccb841aaacf861aed6487
+      internalID: -1646194974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_tile_8
+      name: Kraken'sleg_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0.66666794
-        width: 32.333332
-        height: 32.333332
+        x: 120
+        y: 200
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,8 +242,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67873ba658a6062499a5010f816a06cf
-      internalID: 403391734
+      spriteID: 9cae36ab4a20aa747bf719890df32bd7
+      internalID: -1951004878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kraken'sleg_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 60
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb318f56d86caa4880ec52705d84787
+      internalID: -651542199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kraken'sleg_7
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 100
+        width: 60
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e036a6bc3e67df44ea9d7bde25c7ada2
+      internalID: 1140862113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kraken'sleg_8
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 100
+        width: 60
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cb5ab16bde58c418a9230b5e6f42b4
+      internalID: 1490770282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kraken'sleg_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 60
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eba21fcf6366bb45b4df4b82afb8190
+      internalID: 1913452097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kraken'sleg_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 60
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb72cf379e0319a4d9f421c1995d8015
+      internalID: -294027842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kraken'sleg_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 60
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5cb2aa3272f1344803f4637f55bcd1
+      internalID: -1536074079
       vertices: []
       indices: 
       edges: []
@@ -322,15 +385,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      water_tile_0: 859993503
-      water_tile_1: -178774520
-      water_tile_2: -75177179
-      water_tile_3: -450323490
-      water_tile_4: -483247141
-      water_tile_5: 62782502
-      water_tile_6: 1248693512
-      water_tile_7: -476691565
-      water_tile_8: 403391734
+      Kraken'sleg_0: -1931271666
+      Kraken'sleg_1: -997759189
+      Kraken'sleg_10: -294027842
+      Kraken'sleg_11: -1536074079
+      Kraken'sleg_2: 497396462
+      Kraken'sleg_3: -1077851391
+      Kraken'sleg_4: -1646194974
+      Kraken'sleg_5: -1951004878
+      Kraken'sleg_6: -651542199
+      Kraken'sleg_7: 1140862113
+      Kraken'sleg_8: 1490770282
+      Kraken'sleg_9: 1913452097
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
