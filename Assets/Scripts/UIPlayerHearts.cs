@@ -8,20 +8,21 @@ public class UIPlayerHearts : MonoBehaviour
 
     //[SerializeField] private GameObject _playerHeartsParent;
     [SerializeField] private Image[] _playerHearts;
-    //private Image[] _reverseOrderHearts;
 
     private void Start()
     {
         _playerHealth = GetComponent<PlayerHealth>();
         //_playerHearts = _playerHeartsParent.GetComponentsInChildren<Image>();
-
-        //_reverseOrderHearts = _playerHearts;
-        //Array.Reverse(_reverseOrderHearts);
     }
 
     public void UpdateHeartsUI(int currentHeartCnt)
     {
-        //
-
+        for (int i = 0; i < currentHeartCnt; ++i)
+        {
+            _playerHearts[i].enabled = true;
+            //Debug.Log($"_playerHearts[{i}].enabled = true;");
+        }
+        for (int i = currentHeartCnt; i < _playerHearts.Length; ++i)
+            _playerHearts[i].enabled = false;
     }
 }
