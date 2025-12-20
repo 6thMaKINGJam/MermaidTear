@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 1350652182}
   - component: {fileID: 1350652181}
   m_Layer: 0
-  m_Name: Stone_Tilemap
+  m_Name: Sand_Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12260,7 +12260,7 @@ GameObject:
   - component: {fileID: 2063168417}
   - component: {fileID: 2063168416}
   m_Layer: 0
-  m_Name: Sand_Tilemap
+  m_Name: Stond_Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
