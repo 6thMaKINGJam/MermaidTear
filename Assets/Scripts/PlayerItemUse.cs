@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerItemUse : MonoBehaviour
 {
     private PlayerHealth _playerHealth;
+    [SerializeField] private Animator _swordAnimator;
 
     public enum PlayerItemType
     {
@@ -87,5 +88,6 @@ public class PlayerItemUse : MonoBehaviour
     {
         Debug.Log("sword attack: " + GetAtkPower());
         // up-close attack
+        _swordAnimator.SetBool("SwingNow", true);
     }
 }
