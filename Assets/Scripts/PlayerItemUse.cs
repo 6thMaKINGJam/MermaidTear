@@ -92,7 +92,7 @@ public class PlayerItemUse : MonoBehaviour
         // up-close attack
         _swordAnimator.SetBool("SwingNow", true);
         _swordPivot = _swordPivotWhileAnim;
-        _swordPivot.Rotate()
+        //_swordPivot.Rotate();
         // rotate 90 angles depending on player dir
     }
 }
