@@ -7,6 +7,8 @@ public class PlayerItemUse : MonoBehaviour
 {
     private PlayerHealth _playerHealth;
     [SerializeField] private Animator _swordAnimator;
+    [SerializeField] private Transform _swordPivot;
+    [SerializeField] private Transform _swordPivotWhileAnim;
 
     public enum PlayerItemType
     {
@@ -89,5 +91,8 @@ public class PlayerItemUse : MonoBehaviour
         Debug.Log("sword attack: " + GetAtkPower());
         // up-close attack
         _swordAnimator.SetBool("SwingNow", true);
+        _swordPivot = _swordPivotWhileAnim;
+        //_swordPivot.Rotate();
+        // rotate 90 angles depending on player dir
     }
 }
