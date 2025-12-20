@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FaceDir = PlayerFaceDir.FaceDir;
 
 public class PlayerItemUse : MonoBehaviour
 {
     private PlayerHealth _playerHealth;
+    private PlayerFaceDir _playerFaceDir;
     [SerializeField] private Animator _swordAnimator;
     [SerializeField] private Transform _swordPivot;
+    [SerializeField] private Collider2D _swordAtkTrigger;
     [SerializeField] private Transform _swordPivotWhileAnim;
 
     public enum PlayerItemType
@@ -23,7 +26,7 @@ public class PlayerItemUse : MonoBehaviour
     //        { "LightningAtkPower", 10 },
     //        { "SwordAtkPower", 15 },
     //    };
-    private int GetAtkPower()
+    public int GetAtkPower()
     {
         switch (CurrentItem)
         {
@@ -47,6 +50,8 @@ public class PlayerItemUse : MonoBehaviour
     private void Start()
     {
         _playerHealth = GetComponent<PlayerHealth>();
+        _playerFaceDir = GetComponent<PlayerFaceDir>();
+        _swordAtkTrigger.enabled = false;
     }
 
     private void PlayerSwappedItem(InputAction.CallbackContext ctx)
@@ -88,11 +93,31 @@ public class PlayerItemUse : MonoBehaviour
 
     private void DoSwordAttack()
     {
+        if (_swordAnimator.GetBool("SwingNow")) return; // atk already in process
+
         Debug.Log("sword attack: " + GetAtkPower());
-        // up-close attack
-        _swordAnimator.SetBool("SwingNow", true);
-        _swordPivot = _swordPivotWhileAnim;
-        //_swordPivot.Rotate();
+
+        Vector2 inputDirFloat = InputSystem.actions.FindAction("Move").ReadValue<Vector2>();
+        int _playerDirH = (int)inputDirFloat.x;
+        int _playerDirV = (int)inputDirFloat.y;
+
         // rotate 90 angles depending on player dir
+        float rotAngle;
+        FaceDir currFaceDir = _playerFaceDir.GetPlayerFaceDir();
+        switch (currFaceDir)
+        {
+            case FaceDir.Up: rotAngle = 0; break;
+            case FaceDir.Right: rotAngle = -90; break;
+            case FaceDir.Down: rotAngle = 180; break;
+            case FaceDir.Left: rotAngle = 90; break;
+            default: rotAngle = 0; break;
+        }
+        Debug.Log(currFaceDir + ", " + rotAngle);
+        _swordPivot.localRotation = Quaternion.Euler(_swordPivot.localRotation.x, _swordPivot.localRotation.y, rotAngle);
+
+        // up-close attack
+        _swordAtkTrigger.enabled = true;
+        _swordAnimator.SetBool("SwingNow", true);
+        _swordPivot.localPosition = _swordPivotWhileAnim.localPosition;
     }
 }

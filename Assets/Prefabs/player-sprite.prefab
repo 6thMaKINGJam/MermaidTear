@@ -120,6 +120,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _swordAnimator: {fileID: 7236485403399821121}
+  _swordPivot: {fileID: 2102192695687335173}
+  _swordPivotWhileAnim: {fileID: 9084705880462014274}
+  _swordAtkTrigger: {fileID: 5514817834906990861}
+--- !u!1 &1702693439041614287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5959415017492326669}
+  - component: {fileID: 5514817834906990861}
+  m_Layer: 8
+  m_Name: swordAtkTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5959415017492326669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702693439041614287}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 8984052103274119956}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &5514817834906990861
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702693439041614287}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &2371675181355619699
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +251,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7791740777803786852}
+  - {fileID: 5959415017492326669}
   m_Father: {fileID: 2102192695687335173}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6022842064966211876
@@ -229,12 +300,13 @@ GameObject:
   - component: {fileID: 4619978303145809994}
   - component: {fileID: 4767689428984141985}
   - component: {fileID: 6225269817641508260}
+  - component: {fileID: 2054407971401235940}
   - component: {fileID: 2062727798484922916}
   - component: {fileID: 8348847044442993989}
   - component: {fileID: 4496440739857777085}
   m_Layer: 6
   m_Name: player-sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -415,6 +487,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2054407971401235940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243066830985050552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1204f4efedf9bac48b85110f74233f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerAnimator: {fileID: 6225269817641508260}
 --- !u!114 &2062727798484922916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,6 +527,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _swordAnimator: {fileID: 7236485403399821121}
+  _swordPivot: {fileID: 2102192695687335173}
+  _swordAtkTrigger: {fileID: 5514817834906990861}
+  _swordPivotWhileAnim: {fileID: 9084705880462014274}
 --- !u!114 &4496440739857777085
 MonoBehaviour:
   m_ObjectHideFlags: 0
