@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b340c3d5287afe64d8b67856b61d7bc4, type: 3}
+  m_Name: Level3_QueenConversation
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: "\uD50C\uB808\uC774\uC5B4"
+    text: "\u201C\uC800\uAC8C \uC804\uC124 \uC18D\uC5D0\uC11C \uB0B4\uB824\uC624\uB294\u2026
+      \uC778\uC5B4\uC758 \uB208\uBB3C\u2026!\u201D"
+    nextIndex: 1
+    hasChoices: 0
+    choice1:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    choice2:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    lineEventKey: 
+  - speaker: "\uC778\uC5B4\uC5EC\uC655"
+    text: "\u201C\uC778\uAC04? \uC778\uAC04\uC774\uB77C\uBA74 \uC2DC\uAC04\uC774
+      \uD758\uB800\uC74C\uC5D0\uB3C4 \uBD88\uAD6C\uD558\uACE0 \uC2E0\uBB3C\uC774
+      \uB098!\u201D"
+    nextIndex: 2
+    hasChoices: 0
+    choice1:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    choice2:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    lineEventKey: 
+  - speaker: "\uC778\uC5B4\uC5EC\uC655"
+    text: "\"\uC6B0\uB9AC \uC778\uC5B4\uB97C \uBAA8\uB450 \uC8FD\uC774\uACE0\uB3C4
+      \uBB50\uAC00 \uBD80\uC871\uD574\uC11C \uC628\uAC70\uC9C0?\""
+    nextIndex: 3
+    hasChoices: 0
+    choice1:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    choice2:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    lineEventKey: 
+  - speaker: "\uD50C\uB808\uC774\uC5B4"
+    text: "\u201C\uC8FD\uC600\uB2E4\uACE0\uC694 \uC778\uC5B4\uB4E4\uC744\uC694? \uC800\uB294
+      \uC804\uD600 \uBAA8\uB974\uB294 \uC774\uC57C\uAE30\uC785\uB2C8\uB2E4.\u201D"
+    nextIndex: 4
+    hasChoices: 0
+    choice1:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    choice2:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    lineEventKey: 
+  - speaker: "\uC778\uC5B4\uC5EC\uC655"
+    text: "\u201C\uBAA8\uB978\uB2E4\uACE0? (\uB208\uBB3C\uC744 \uD758\uB9AC\uBA70)
+      \uC6B0\uB9AC \uC778\uC5B4\uB4E4\uC740 \uB208\uBB3C\uC744 \uD758\uB9AC\uBA74
+      \uC774\uB807\uAC8C \uBCF4\uC11D\uC774 \uB098\uC624\uC9C0, \uC774\uAC78 \uBCF8
+      \uC778\uAC04\uB4E4\uC740 \uD0D0\uC695\uC5D0 \uB208\uC774 \uBA40\uC5B4, \uC218\uB9CE\uC740
+      \uC778\uC5B4\uB4E4\uC5D0\uAC8C \uBABB\uD560 \uC9D3\uC744 \uD588\uC5B4. \uB098\uB3C4
+      \uAC19\uC740 \uC77C\uC744 \uB2F9\uD588\uACE0! \uB0B4\uAC00 \uC544\uD2C0\uB780\uD2F0\uC2A4\uB85C
+      \uACA8\uC6B0\uACA8\uC6B0 \uB3C4\uB9DD\uCCD0\uC654\uC744 \uB54C \uC774 \uC544\uD2C0\uB780\uD2F0\uC2A4\uC5D0\uB294
+      \uC544\uBB34\uB3C4 \uC5C6\uC5C8\uC5B4\u2026. \uBAA8\uB450 \uC0B4 \uAE38\uC744
+      \uCC3E\uC740 \uAC70\uB77C\uBA74 \uB2E4\uD589\uC774\uACA0\uC9C0\uB9CC\u2026
+      \uB09C \uC2DC\uAC04\uC774 \uD750\uB978 \uC9C0\uAE08\uB3C4 \uB5A0\uB09C \uC778\uC5B4\uB4E4\uC744
+      \uAE30\uB2E4\uB9AC\uB294 \uC911\uC774\uC57C.  \uC778\uAC04\uC774\uB77C\uBA74
+      \uC9C0\uACA8\uC6CC!! \uC774 \uC778\uC5B4\uC758 \uB208\uBB3C\uC740 \uB3CC\uC544\uC62C
+      \uC6B0\uB9AC \uC778\uC5B4\uB4E4\uC744 \uC704\uD574 \uB0A8\uACA8\uB193\uC740
+      \uAC70\uC57C \uB108\uAC00 \uC808\uB300 \uAC00\uC838\uAC08 \uC218 \uC5C6\uC5B4.
+      \uC774 \uBCF4\uC11D\uC744 \uAC00\uC838\uAC00\uACE0 \uC2F6\uC73C\uBA74 \uB0B4
+      \uC2EC\uC7A5\uC5D0 \uC788\uB294 \uBCF4\uC11D\uC744 \uC9C1\uC811 \uB72F\uC5B4\uAC00\uC57C
+      \uD560 \uAC83\uC774\uC57C.   \u201D"
+    nextIndex: 5
+    hasChoices: 1
+    choice1:
+      text: "\u201C\uB098\uC758 \uC5F0\uC778\uC774 \uC9C0\uAE08 \uC8FD\uC5B4\uAC00\uACE0
+        \uC788\uC5B4\u2026 \uB09C \uC778\uC5B4\uB97C \uC4F0\uB7EC\uB728\uB824\uC57C\uB9CC
+        \uD574\u201D"
+      nextIndex: -1
+      eventKey: FIGHT_QUEEN
+    choice2:
+      text: "\u201C\uB098\uC758 \uC5F0\uC778\uC744 \uC0B4\uB9AC\uC790\uACE0\u2026
+        \uC774\uB807\uAC8C\uAE4C\uC9C0 \uD574\uC57C\uD558\uB098? \uC800 \uC774\uC57C\uAE30\uB97C
+        \uB4E4\uC73C\uB2C8 \uB9C8\uC74C\uC774 \uB108\uBB34 \uC544\uD30C\u201D"
+      nextIndex: -1
+      eventKey: MERCY_PATH
+    lineEventKey: 
