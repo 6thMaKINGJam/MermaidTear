@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int _maxHealth = 10;
-    private int _currentHealth;
+    [SerializeField] private float _dyingDur = 0.8f;
+    public int CurrentHealth;
     public bool TempInvincible { get; set; }
 
     private void Start()
@@ -15,26 +16,35 @@ public class EnemyHealth : MonoBehaviour
 
     public void ResetHealth()
     {
-        _currentHealth = _maxHealth;
+        CurrentHealth = _maxHealth;
         healthChangedAction();
     }
 
     public void ReduceHealth(int amount)
     {
-        _currentHealth -= amount;
+        if (CurrentHealth <= 0) return;
+        CurrentHealth -= amount;
+        if (CurrentHealth <= 0) StartCoroutine(ScheduleDie(_dyingDur));
         healthChangedAction();
     }
 
     public void RestoreHealth(int amount)
     {
-        _currentHealth += amount;
-        if (_currentHealth > _maxHealth) ResetHealth();
+        CurrentHealth += amount;
+        if (CurrentHealth > _maxHealth) ResetHealth();
         healthChangedAction();
+    }
+
+    public IEnumerator ScheduleDie(float dyingDur)
+    {
+        yield return new WaitForSeconds(dyingDur);
+        gameObject.SetActive(false);
+        Debug.Log("setactivefalse");
     }
 
     private void healthChangedAction()
     {
-        Debug.Log($"enemy \"name\" health: {_currentHealth}");
+        Debug.Log($"enemy \"name\" health: {CurrentHealth}");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
