@@ -6,6 +6,7 @@ using UnityEngine;
 public class ZoomToKrakenBounds : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera _krakenVirtualCam;
+    [SerializeField] private float _startKrakenAtkAfterSeconds = 0.5f;
 
     private bool _krakenZoomComplete;
 
@@ -22,6 +23,13 @@ public class ZoomToKrakenBounds : MonoBehaviour
         {
             _krakenVirtualCam.gameObject.SetActive(true);
             _krakenZoomComplete = true;
+            StartCoroutine(ScheduleInvokeKrakenAtk());
         }
+    }
+
+    private IEnumerator ScheduleInvokeKrakenAtk()
+    {
+        yield return new WaitForSeconds(_startKrakenAtkAfterSeconds);
+        KrakenAttack.InvokeStartKrakenAttack();
     }
 }

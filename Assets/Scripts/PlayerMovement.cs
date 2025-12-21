@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
+        if (PlayerHealth.IsDead) return;
+
         Vector2 inputDirFloat = InputSystem.actions.FindAction("Move").ReadValue<Vector2>();
         _playerDirH = (int)inputDirFloat.x;
         _playerDirV = (int)inputDirFloat.y;

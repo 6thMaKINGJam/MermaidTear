@@ -42,7 +42,7 @@ public class Level3Controller : MonoBehaviour
         dialogueManager.OnDialogueEvent += HandleEvent;
 
         // 🔹 체력 이벤트
-        if (playerHealth != null) playerHealth.OnDead += HandlePlayerDead;
+        if (playerHealth != null) PlayerHealth.OnDead += HandlePlayerDead;
         else Debug.LogError("[Level3Controller] playerHealth 연결 안 됨!");
 
         if (crabHealth != null) crabHealth.OnDead += HandleCrabDead;
@@ -132,7 +132,7 @@ public class Level3Controller : MonoBehaviour
             dialogueManager.OnDialogueEvent -= HandleEvent;
 
         if (playerHealth != null)
-            playerHealth.OnDead -= HandlePlayerDead;
+            PlayerHealth.OnDead -= HandlePlayerDead;
 
         if (crabHealth != null)
             crabHealth.OnDead -= HandleCrabDead;

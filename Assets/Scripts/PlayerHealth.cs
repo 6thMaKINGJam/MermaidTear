@@ -11,8 +11,10 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private UIPlayerHearts _uiPlayerHearts;
 
-    public event Action OnDead;
+    public static event Action OnDead;
     private bool deadCalled = false;
+
+    public static bool IsDead { get; private set; }
 
     private void Start()
     {
@@ -23,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
     {
         CurrentHealth = MaxHealth;
         deadCalled = false;
+        IsDead = false;
         healthChangedAction();
     }
 
@@ -39,6 +42,7 @@ public class PlayerHealth : MonoBehaviour
             if (!deadCalled)
             {
                 deadCalled = true;
+                IsDead = true;
                 OnDead?.Invoke();
             }
             return;
