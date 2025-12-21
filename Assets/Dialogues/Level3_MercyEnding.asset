@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b340c3d5287afe64d8b67856b61d7bc4, type: 3}
+  m_Name: Level3_MercyEnding
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: "\uD50C\uB808\uC774\uC5B4"
+    text: "\"\uADF8\uB798... \uC774\uAC74 \uC544\uB2C8\uC57C... \uB2E4\uC2DC \uB3CC\uC544\uAC00\uC57C\uACA0\uC5B4....\""
+    nextIndex: 1
+    hasChoices: 0
+    choice1:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    choice2:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    lineEventKey: 
+  - speaker: "\uC778\uC5B4\uC5EC\uC655"
+    text: "\"\uB108\uB294 \uB2E4\uB978 \uC778\uAC04\uB4E4\uCC98\uB7FC \uB0B4 \uC2EC\uC7A5\uC5D0
+      \uC788\uB294 \uC778\uC5B4\uC758 \uBCF4\uC11D\uC744 \uAC00\uC838\uAC00\uB824
+      \uD558\uC9C0 \uC54A\uB294\uAD6C\uB098.....\""
+    nextIndex: 2
+    hasChoices: 0
+    choice1:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    choice2:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    lineEventKey: 
+  - speaker: "\uC778\uC5B4\uC5EC\uC655"
+    text: "\"\uC774 \uBE44\uB298\uC744 \uC904\uAC8C.. \uB108\uC758 \uC5F0\uC778\uC758
+      \uACE0\uD1B5\uC744 \uB9C9\uC544\uC904\uAC70\uC57C\""
+    nextIndex: -1
+    hasChoices: 0
+    choice1:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    choice2:
+      text: 
+      nextIndex: 0
+      eventKey: 
+    lineEventKey: 
