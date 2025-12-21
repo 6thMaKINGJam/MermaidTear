@@ -11,6 +11,13 @@ public class EnemyMove : MonoBehaviour
     private bool currTarget;
     private Vector3 getCurrTarget() => currTarget ? _positionB.position : _positionA.position;
 
+    private EnemyHealth _health;
+
+    private void Start()
+    {
+        _health = GetComponent<EnemyHealth>();
+    }
+
     private void FixedUpdate()
     {
         MoveEnemy();
@@ -18,6 +25,8 @@ public class EnemyMove : MonoBehaviour
 
     private void MoveEnemy()
     {
+        if (_health.CurrentHealth <= 0) return;
+
         transform.position = Vector3.MoveTowards(transform.position, getCurrTarget(), _moveSpeed * Time.fixedDeltaTime);
 
         if (Vector3.Distance(transform.position, getCurrTarget()) < Mathf.Epsilon * 3)
