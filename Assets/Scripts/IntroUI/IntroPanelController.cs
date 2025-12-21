@@ -9,8 +9,9 @@ public class IntroPanelController : MonoBehaviour
     public GameObject subtitlepanel;
 
     public AudioSource firstaudiosource;
-    public AudioClip panelsound;
-
+    public AudioSource secondaudiosource;
+    //public AudioClip panelsound;
+    
     public void showpanel()
     {
         firstaudiosource.Stop();
@@ -18,8 +19,9 @@ public class IntroPanelController : MonoBehaviour
         startbutton.SetActive(false);
 
         subtitlepanel.SetActive(true);
-
-        AudioSource.PlayClipAtPoint(panelsound, Vector3.zero);
+        
+        //AudioSource.PlayClipAtPoint(panelsound, Vector3.zero);
+        secondaudiosource.Play();
     }
     
 }
