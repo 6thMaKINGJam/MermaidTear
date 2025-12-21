@@ -12,12 +12,14 @@ public class PlayerItemUse : MonoBehaviour
     [SerializeField] private Transform _swordPivot;
     [SerializeField] private Collider2D _swordAtkTrigger;
     [SerializeField] private Transform _swordPivotWhileAnim;
+    [SerializeField] private GameObject _shieldObj;
 
     public enum PlayerItemType
     {
         HealingPotion,
         LightningAtk,
         SwordAtk,
+        ShieldMagic,
     }
     public PlayerItemType CurrentItem { get; set; }
 
@@ -38,13 +40,15 @@ public class PlayerItemUse : MonoBehaviour
 
     private void OnEnable()
     {
-        InputSystem.actions.FindAction("UseItem").started += PlayerHasUsedItem;
         InputSystem.actions.FindAction("SwapItem").started += PlayerSwappedItem;
+        InputSystem.actions.FindAction("UseItem").started += PlayerHasUsedItem;
+        InputSystem.actions.FindAction("UseItem").canceled += PlayerStoppedUsingItem;
     }
     private void OnDisable()
     {
-        InputSystem.actions.FindAction("UseItem").started -= PlayerHasUsedItem;
         InputSystem.actions.FindAction("SwapItem").started -= PlayerSwappedItem;
+        InputSystem.actions.FindAction("UseItem").started -= PlayerHasUsedItem;
+        InputSystem.actions.FindAction("UseItem").canceled -= PlayerStoppedUsingItem;
     }
 
     private void Start()
@@ -52,6 +56,7 @@ public class PlayerItemUse : MonoBehaviour
         _playerHealth = GetComponent<PlayerHealth>();
         _playerFaceDir = GetComponent<PlayerFaceDir>();
         _swordAtkTrigger.enabled = false;
+        DeactivateShield();
     }
 
     private void PlayerSwappedItem(InputAction.CallbackContext ctx)
@@ -61,7 +66,8 @@ public class PlayerItemUse : MonoBehaviour
         {
             case PlayerItemType.HealingPotion: CurrentItem = PlayerItemType.LightningAtk; break;
             case PlayerItemType.LightningAtk: CurrentItem = PlayerItemType.SwordAtk; break;
-            case PlayerItemType.SwordAtk: CurrentItem = PlayerItemType.HealingPotion; break;
+            case PlayerItemType.SwordAtk: CurrentItem = PlayerItemType.ShieldMagic; break;
+            case PlayerItemType.ShieldMagic: CurrentItem = PlayerItemType.HealingPotion; break;
             default: break;
         }
         string currItem = CurrentItem.ToString();
@@ -75,6 +81,16 @@ public class PlayerItemUse : MonoBehaviour
             case PlayerItemType.HealingPotion: UseHealingPotion(); break;
             case PlayerItemType.LightningAtk: DoLightningAttack(); break;
             case PlayerItemType.SwordAtk: DoSwordAttack(); break;
+            case PlayerItemType.ShieldMagic: ActivateShield(); break;
+            default: break;
+        }
+    }
+
+    private void PlayerStoppedUsingItem(InputAction.CallbackContext ctx)
+    {
+        switch (CurrentItem)
+        {
+            case PlayerItemType.ShieldMagic: DeactivateShield(); break;
             default: break;
         }
     }
@@ -119,5 +135,17 @@ public class PlayerItemUse : MonoBehaviour
         _swordAtkTrigger.enabled = true;
         _swordAnimator.SetBool("SwingNow", true);
         _swordPivot.localPosition = _swordPivotWhileAnim.localPosition;
+    }
+
+    private void ActivateShield()
+    {
+        _shieldObj.SetActive(true);
+        _playerHealth.TempInvincible = true;
+    }
+
+    private void DeactivateShield()
+    {
+        _shieldObj.SetActive(false);
+        _playerHealth.TempInvincible = false;
     }
 }
