@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private UIPlayerHearts _uiPlayerHearts;
 
+    public event Action OnDead;
+    private bool deadCalled = false;
+
     private void Start()
     {
         ResetHealth();
@@ -18,13 +22,28 @@ public class PlayerHealth : MonoBehaviour
     public void ResetHealth()
     {
         CurrentHealth = MaxHealth;
+        deadCalled = false;
         healthChangedAction();
     }
 
     public void ReduceHealth(float amount)
     {
         if (CurrentHealth <= 0) { CurrentHealth = 0; return; }
+
         CurrentHealth -= amount;
+        if (CurrentHealth <= 0)
+        {
+            CurrentHealth = 0;
+            healthChangedAction();
+
+            if (!deadCalled)
+            {
+                deadCalled = true;
+                OnDead?.Invoke();
+            }
+            return;
+        }
+
         healthChangedAction();
     }
 
@@ -39,7 +58,6 @@ public class PlayerHealth : MonoBehaviour
     {
         int heartCnt = Mathf.RoundToInt(CurrentHealth / 0.5f);
         _uiPlayerHearts.UpdateHeartsUI(heartCnt);
-
         Debug.Log($"player health: {CurrentHealth}, player heartCnt: {heartCnt}");
     }
 
@@ -52,3 +70,4 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 }
+
