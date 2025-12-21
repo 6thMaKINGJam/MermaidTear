@@ -6,6 +6,9 @@ public class Level3Controller : MonoBehaviour
 {
     public DialogueManager dialogueManager;
 
+    [SerializeField] private CrabBubbleShooter crabShooter;
+
+
     [Header("Scene Objects (Toggle)")]
     [SerializeField] private GameObject crabRoot;
     [SerializeField] private GameObject mermaid0;
@@ -74,9 +77,7 @@ public class Level3Controller : MonoBehaviour
             if (crabRoot != null) crabRoot.SetActive(true);
             if (mermaid0 != null) mermaid0.SetActive(false);
 
-            // 필요하면 전투 시작 시 체력 초기화
-            // playerHealth?.ResetHealth();
-            // crabHealth?.ResetHealth();
+            crabShooter?.SetShooting(true);  
         }
         else if (key == "MERCY_PATH")
         {
