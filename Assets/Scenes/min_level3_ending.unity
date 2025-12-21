@@ -306,7 +306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 314}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98190310
@@ -330,13 +330,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uADF8\uB807\uAC8C \uB098\uB294 \uC5F0\uC778\uC758 \uBD88\uCE58\uBCD1\uC744
-    \uCE58\uB8CC\uD558\uB294\uB370 \uC131\uACF5\uD558\uC600\uC9C0\uB9CC, \uD3C9\uC0DD
+    \uCE58\uB8CC\uD558\uB294\uB370 \uC131\uACF5\uD558\uC600\uC9C0\uB9CC, \n\uD3C9\uC0DD
     \uC778\uC5B4\uC758 \uBE44\uBA85\uC18C\uB9AC\uB97C \uB4E4\uC73C\uBA74\uC11C \uC0B4\uAC8C
-    \uB418\uC5C8\uB2E4. \uC774\uAC8C \uC815\uB9D0 \uC0B4\uC544\uC788\uB294 \uAC8C
+    \uB418\uC5C8\uB2E4. \n\uC774\uAC8C \uC815\uB9D0 \uC0B4\uC544\uC788\uB294 \uAC8C
     \uB9DE\uB294\uAC78\uAE4C?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 054cf044b1e7ef84c927d11a3379631a, type: 2}
+  m_sharedMaterial: {fileID: -5388820549842792612, guid: 054cf044b1e7ef84c927d11a3379631a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -360,8 +360,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -846,7 +846,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269806157}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f33d0f5a0f05c89469ac5c8a1a292d7c, type: 2}
   m_CullingMode: 0
@@ -1410,7 +1410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefa2c67d3a5fd3458e40240c57dd93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 149
+  _maxHealth: 70
   _dyingDur: 0.8
   CurrentHealth: 0
 --- !u!114 &414350289
@@ -2117,7 +2117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 118}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890757767
@@ -2141,13 +2141,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uADF8\uB807\uAC8C \uC5F0\uC778\uC5D0\uAC8C \uBE44\uB298\uC744 \uC0AC\uC6A9\uD574,
-    \uACE0\uD1B5\uC744 \uC5C6\uC560\uC92C\uACE0,  \uC5F0\uC778\uC758 \uC5BC\uAD74\uC774
+    \uACE0\uD1B5\uC744 \uC5C6\uC560\uC92C\uACE0,  \n\uC5F0\uC778\uC758 \uC5BC\uAD74\uC774
     \uC870\uAE08\uC774\uB098\uB9C8 \uD3B8\uC548\uD574\uBCF4\uC5EC\uC11C \uC815\uB9D0
-    \uB2E4\uD589\uC774\uB77C\uACE0 \uC0DD\uAC01\uD588\uB2E4. \uB2F9\uC2E0\uC740 \uC5F0\uC778\uACFC
-    \uB0A8\uC740 \uC778\uC0DD\uC744 \uD589\uBCF5\uD558\uAC8C \uBCF4\uB0C8\uB2E4."
+    \uB2E4\uD589\uC774\uB77C\uACE0\n \uC0DD\uAC01\uD588\uB2E4. \uB2F9\uC2E0\uC740
+    \uC5F0\uC778\uACFC \uB0A8\uC740 \uC778\uC0DD\uC744 \uD589\uBCF5\uD558\uAC8C \uBCF4\uB0C8\uB2E4."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 054cf044b1e7ef84c927d11a3379631a, type: 2}
+  m_sharedMaterial: {fileID: -5388820549842792612, guid: 054cf044b1e7ef84c927d11a3379631a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2171,8 +2171,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2187,7 +2187,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -333.2276, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2408,7 +2408,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078066131}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d41811d0abeafdb40b3d6bc1ee853982, type: 2}
   m_CullingMode: 0
@@ -2585,7 +2585,9 @@ MonoBehaviour:
   mermaid0: {fileID: 1475145045}
   playerHealth: {fileID: 2061242231}
   crabHealth: {fileID: 414350288}
-  gameOverPanel: {fileID: 1106116454}
+  GameOverPanel: {fileID: 1106116454}
+  Ending1Panel: {fileID: 294722247}
+  Ending2Panel: {fileID: 1254636180}
   introConversation: {fileID: 11400000, guid: ca1bf22b73643fb4385d6573f539a2aa, type: 2}
   mercyEndingConversation: {fileID: 11400000, guid: 662ae7766647eab4ab372ee32a388de7, type: 2}
 --- !u!4 &1185962578
@@ -2670,7 +2672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1254636181
 RectTransform:
   m_ObjectHideFlags: 0
