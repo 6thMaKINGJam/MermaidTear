@@ -140,6 +140,6 @@ public class Level3Controller : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level 3");
     }
 }
