@@ -23,8 +23,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReduceHealth(float amount)
     {
+        if (CurrentHealth <= 0) { CurrentHealth = 0; return; }
         CurrentHealth -= amount;
-        if (CurrentHealth < 0) CurrentHealth = 0;
         healthChangedAction();
     }
 
