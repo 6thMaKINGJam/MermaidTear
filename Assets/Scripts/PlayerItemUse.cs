@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,6 +23,7 @@ public class PlayerItemUse : MonoBehaviour
         ShieldMagic,
     }
     public PlayerItemType CurrentItem { get; set; }
+    public static event Action<PlayerItemType> ItemSwapped;
 
     //public Dictionary<string, int> PlayerAttackStrength = new Dictionary<string, int>()
     //    {
@@ -72,6 +74,7 @@ public class PlayerItemUse : MonoBehaviour
         }
         string currItem = CurrentItem.ToString();
         Debug.Log($"item swapped: {prevItem} -> {currItem}");
+        ItemSwapped?.Invoke(CurrentItem);
     }
 
     private void PlayerHasUsedItem(InputAction.CallbackContext ctx)
