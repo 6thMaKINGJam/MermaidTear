@@ -69,7 +69,7 @@ public class PlayerItemUse : MonoBehaviour
             case PlayerItemType.HealingPotion: CurrentItem = PlayerItemType.LightningAtk; break;
             case PlayerItemType.LightningAtk: CurrentItem = PlayerItemType.SwordAtk; break;
             case PlayerItemType.SwordAtk: CurrentItem = PlayerItemType.ShieldMagic; break;
-            case PlayerItemType.ShieldMagic: CurrentItem = PlayerItemType.HealingPotion; break;
+            case PlayerItemType.ShieldMagic: DeactivateShield(); CurrentItem = PlayerItemType.HealingPotion; break;
             default: break;
         }
         string currItem = CurrentItem.ToString();
