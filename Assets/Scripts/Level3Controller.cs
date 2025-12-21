@@ -1,13 +1,21 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Level3Controller : MonoBehaviour
 {
     public DialogueManager dialogueManager;
 
+    [SerializeField]
+    private GameObject gameOverPanel;
+
     [Header("Conversations")]
     public Conversation introConversation;        //  씬 시작 3초 뒤 시작할 첫 대화
     public Conversation mercyEndingConversation;  // (기존 연민 루트용)
+
+    [HideInInspector]
+    public bool isGameOver = false;
+
 
     private void Start()
     {
@@ -54,6 +62,7 @@ public class Level3Controller : MonoBehaviour
 
             StartCoroutine(StartMercyEndingNextFrame());
         }
+        SetGameOver();
     }
 
     private IEnumerator StartMercyEndingNextFrame()
@@ -67,4 +76,23 @@ public class Level3Controller : MonoBehaviour
         if (dialogueManager != null)
             dialogueManager.OnDialogueEvent -= HandleEvent;
     }
+
+    public void SetGameOver()
+    {
+        isGameOver = true;
+        
+        Invoke("ShowGameOverPanel", 3f);
+    }
+
+    void ShowGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+
+
 }
